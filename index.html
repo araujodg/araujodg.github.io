@@ -4,11 +4,17 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap"
+      rel="stylesheet"
+    />
     <title>Easy ScoreBoard</title>
   </head>
-  <body class="flex flex-col items-center h-screen p-6">
+  <body class="flex flex-col items-center font-orbitron text-white  bg-black h-screen p-6">
     <header>
-      <h1 class="text-3xl font-bold">Marcador de Pontos</h1>
+      <h1 class="text-3xl font-bold uppercase">Placar</h1>
     </header>
     <main class="flex justify-around w-screen mt-10">
       <div class="flex flex-col justify-center items-center">
@@ -16,13 +22,13 @@
           <input
             type="text"
             placeholder="digite o nome do time"
-            class="text-2xl text-center font-bold"
+            class="text-2xl bg-black text-center outline-none font-bold"
           />
         </form>
-        <p id='left-counter' class="text-9xl font-bold">0</p>
-        <div class="flex justify-center items-center gap-4">
-          <button id="left-increment-btn">+</button>
-          <button id="left-decrement-btn">-</button>
+        <p id="left-counter" class="text-9xl text-lime-400 font-bold font-orbitron">0</p>
+        <div class="flex justify-center items-center gap-8">
+          <button id="left-increment-btn" class="text-5xl">+</button>
+          <button id="left-decrement-btn" class="text-5xl">-</button>
         </div>
       </div>
       <div class="flex flex-col justify-center items-center">
@@ -30,18 +36,18 @@
           <input
             type="text"
             placeholder="digite o nome do time"
-            class="text-2xl text-center font-bold"
+            class="text-2xl text-center bg-black outline-none font-bold"
           />
         </form>
-        <p id='right-counter' class="text-9xl font-bold">0</p>
-        <div class="flex justify-center items-center gap-4">
-          <button id="right-increment-btn">+</button>
-          <button id="right-decrement-btn">-</button>
+        <p id="right-counter" class="text-9xl text-lime-400 font-bold font-orbitron">0</p>
+        <div class="flex justify-center items-center gap-8">
+          <button id="right-increment-btn" class="text-5xl">+</button>
+          <button id="right-decrement-btn" class="text-5xl">-</button>
         </div>
       </div>
     </main>
-    <footer class="mt-14">
-      <button id="reset-btn">Zerar</button>
+    <footer class="mt-2">
+      <button id="reset-btn" class="text-lg border-2 p-3 rounded-2xl">Zerar</button>
     </footer>
     <script type="module" src="/main.js"></script>
   </body>
